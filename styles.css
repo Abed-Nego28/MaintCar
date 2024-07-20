@@ -6,7 +6,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-#maintenance-input {
+#maintenance-input, #category-select, #due-date {
     flex-grow: 1;
 }
 
@@ -14,6 +14,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .list-group-item button {
@@ -27,4 +28,9 @@ h1 {
 
 .list-group-item button:hover {
     background: #218838;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
 }

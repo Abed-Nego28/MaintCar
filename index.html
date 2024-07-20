@@ -10,10 +10,24 @@
 <body>
     <div class="container my-5">
         <h1 class="text-center mb-4">Car Maintenance Tracker</h1>
-        <form id="maintenance-form" class="d-flex mb-3">
-            <input type="text" id="maintenance-input" class="form-control me-2" placeholder="Add a new maintenance task" required>
+        <form id="maintenance-form" class="d-flex flex-column mb-3">
+            <div class="mb-3">
+                <input type="text" id="maintenance-input" class="form-control mb-2" placeholder="Add a new maintenance task" required>
+                <select id="category-select" class="form-select mb-2" required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="Oil">Oil</option>
+                    <option value="Tires">Tires</option>
+                    <option value="Brakes">Brakes</option>
+                </select>
+                <input type="date" id="due-date" class="form-control" required>
+            </div>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>
+        <div class="d-flex justify-content-between mb-3">
+            <button id="filter-all" class="btn btn-secondary">All</button>
+            <button id="filter-complete" class="btn btn-success">Complete</button>
+            <button id="filter-incomplete" class="btn btn-warning">Incomplete</button>
+        </div>
         <ul id="maintenance-list" class="list-group"></ul>
     </div>
     <script src="app.js"></script>
